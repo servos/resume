@@ -58,14 +58,36 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage{unicode-math}
 
+\newcommand*{\fontdir}[1][fonts/NeueHelvetica/]{\def\@fontdir{#1}}
+\fontdir
+
+
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Path = fonts/NeueHelvetica/, Mapping=tex-text, Color=textcolor]{HelveticaNeueLTCom-Lt}
+\setmainfont[Path = fonts/NeueHelvetica/, Mapping=tex-text, Color=textcolor]{HelveticaNeueLTCom-Th}
 
-\newfontfamily\bodyfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-Roman}
-\newfontfamily\thinfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-UltLt}
-\newfontfamily\headingfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-BdCn}
+\newfontfamily\headingfont[
+  Path=\@fontdir,
+  UprightFont=*-BdCn,
+  ItalicFont=*-BdCnO,
+  BoldFont=*-BdCn,
+  BoldItalicFont=*-BdCnO,
+]{HelveticaNeueLTCom}
 
+\newfontfamily\thinfont[
+  Path=\@fontdir,
+  UprightFont=*-UltLt,
+  ItalicFont=*-UltLtIt,
+  BoldFont=*-Lt,
+  BoldItalicFont=*-LtIt,
+]{HelveticaNeueLTCom}
 
+\newfontfamily\bodyfont[
+  Path=\@fontdir,
+  UprightFont=*-Th,
+  ItalicFont=*-ThIt,
+  BoldFont=*-Roman,
+  BoldItalicFont=*-It,
+]{HelveticaNeueLTCom}
 
 %\setmathfont{XITS Math}
 
@@ -86,7 +108,7 @@
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3.5cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
+      {\thinfont #1} \hspace{0.3cm} {\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
@@ -127,7 +149,7 @@
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par
 }
 
 \renewcommand{\subsection}[2]{
