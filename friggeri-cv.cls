@@ -56,14 +56,16 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\RequirePackage{unicode-math}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Path = fonts/NeueHelvetica/, Mapping=tex-text, Color=textcolor]{HelveticaNeueLTCom-Lt}
+
+\newfontfamily\bodyfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-Roman}
+\newfontfamily\thinfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-UltLt}
+\newfontfamily\headingfont[Path = fonts/NeueHelvetica/]{HelveticaNeueLTCom-BdCn}
+
+
 
 %\setmathfont{XITS Math}
 
@@ -291,7 +293,7 @@
 
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
+  \nameparts{#1}\ifblank{\namepartgiven}{}{\namepartgiven\space}\namepartfamily%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
     {}%
