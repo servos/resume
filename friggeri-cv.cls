@@ -176,7 +176,7 @@
   #1&\parbox[t]{12.8cm}{%
     \textbf{#2}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    {\footnotesize #3}\\%
     #4\vspace{\parsep}%
   }\\}
 
@@ -213,8 +213,26 @@
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[book]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
+\DeclareFieldFormat[patent]{title}{#1\par}
 \DeclareFieldFormat[misc]{title}{#1\par}
 \DeclareFieldFormat[report]{title}{#1\par}
+
+\DeclareBibliographyDriver{patent}{%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \footnotesize%\addfontfeature{Color=lightgray}%
+    \printfield{number}%
+    \setunit{\addcomma\space}%
+    \printfield{note}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
 
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
@@ -223,7 +241,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize%\addfontfeature{Color=lightgray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
@@ -243,7 +261,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize%\addfontfeature{Color=lightgray}\itshape%
     \printlist{publisher}%
     \setunit*{\addcomma\space}%
     \printfield{note}%
@@ -264,7 +282,7 @@
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}%
+    \footnotesize%\addfontfeature{Color=lightgray}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
     \printfield{year}%
@@ -314,7 +332,7 @@
 }
 
 \DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
+  \small%\addfontfeature{Color=lightgray}%
   \nameparts{#1}\ifblank{\namepartgiven}{}{\namepartgiven\space}\namepartfamily%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
