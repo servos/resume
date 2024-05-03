@@ -1,324 +1,332 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% James Servos Resume
-% Uses the Friggeri Resume/CV Template
-% XeLaTeX Template
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-\documentclass[stdletter]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
-\usepackage{enumitem}
-\usepackage{unicode-math}
-\usepackage{fontawesome}
 
-\setlist{nolistsep}
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-concrete}
+% Uncomment if you would like to specify your own color
+\definecolor{awesome}{HTML}{666666}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{James}{Servos}
+\position{Engineering R\&D Leader{\enskip\cdotp\enskip}Autonomy and Robotics}
+\address{Kitchener, Ontario, Canada}
+
+\mobile{+1-519-574-1772}
+\email{servos@gmail.com}
+%\dateofbirth{January 1st, 1970}
+%\homepage{www.posquit0.com}
+\github{servos}
+\linkedin{james-servos}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+\googlescholar{S-cpmfYAAAAJ}{James Servos}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
-\header{James}{Servos}{Autonomy Engineering Leader} % Your name and current job title/field
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
 
-%----------------------------------------------------------------------------------------
-%	SIDEBAR SECTION
-%----------------------------------------------------------------------------------------
-\bodyfont
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {James Servos~~~·~~~Resume}
+  {\thepage}
 
-\begin{aside} % In the aside, each new line forces a line break
-\section{contact}
-909 Rush Meadow Crt
-Kitchener, Ontario
-N2R 1K9
-Canada
-~
-+1 (519) 574 1772
-~
-{\color{green}{\symbol{"F0E0}}} \href{mailto:servos@gmail.com}{servos@gmail.com}
-{\color{blue}{\faLinkedin}} \href{www.linkedin.com/in/james-servos-89454855}{LinkedIn}
-{\color{purple}{\faGithub}} \href{https://github.com/servos}{GitHub}
-~
-\section{key skills}
-{\color{red}{\faCogs}} mobile robotics 
-AI
-perception 
-machine learning
-localization
-SLAM
-computer vision
-sensors 
-~
-\section{programming}
-{\color{purple}{\faPowerOff}} C/C++ \\ Python \\ Lua
-~
-\section{technology}
-LIDAR
-stereo vision
-catadioptric cameras
-IMU
-CUDA
-AWS
-~
-\section{libraries}
-ROS
-PCL
-TensorFlow
-Eigen
-g2o
-gtsam
-OpenCV
-SQL
-~
-\end{aside}
-%---------
-% 
-%---------
 
-%\section{skill summary}
-%\begin{itemize}[noitemsep]
-%    \item Experience with robotic perception applications and real time embedded programming
-%    \item Experience with hardware such as Velodyne LIDAR, stereo cameras, catadioptric cameras, and IMUs
-%    \item Experience developing in Linux, OSX, and QNX
-%    \item Familiar with third party libraries such as ROS, PCL, OpenCV, CUDA, and more.
-%    
-%    \item Experienced in basic electronic circuit debugging, analysis, and prototyping
-%    \item Skilled at mechanical hands-on work and basic technical drawing
-%    
-%    \item Exceptionally fast learner, outstanding problem solving abilities, and excellent communication skills
-%\end{itemize}
+\vspace*{-3mm}
+%-------------------------------------------------------------------------------
+% Summary
+%-------------------------------------------------------------------------------
+\cvsection{Summary}
 
-\section{summary}
-\vspace{-0.1cm}
-Talented engineering manager with a passion for autonomous mobile robotics, and a background in both hardware level coding and professional software development. Highly experienced with state-of-the-art robotics, perception, and SLAM technologies having completed numerous robotics projects, research initiatives, and publications.
-\vspace{-0.2cm}
+\begin{cvparagraph}
 
+Dynamic and accomplished Engineering Leader with over a decade of hands-on experience building robotics products from the ground up, coupled with a profound passion for research and innovation. With a proven track record of delivering cutting-edge robotic systems, I thrive at the intersection of rigorous engineering deveopment and applied academic research. Eager to bring my expertise to a forward-thinking organization committed to pushing the boundaries of technology in the field of robotics.
+
+\end{cvparagraph}
+
+\vspace*{-4mm}
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
+\cvsection{Work Experience}
+\begin{cventries}
+\vspace*{-1mm}
+\cventry
+  {Director, Robotics Software}
+  {Locus Robotics}
+  {Willmington, USA (Remote)}
+  {2024--Present}
+  {
+    \begin{cvitems}
+      \item Responsible for all aspects of robotics software development including direct management, technical oversight and design review.
+      \item Develop release plans, priorities, roadmaps, define program objectives and ensure projects stay on track both technically and managerially.
+      \item Oversee the six teams that build all aspects of the robot software stack, Localization \& Mapping, Perception, Planning \& Control, Platform, Tools, and Simulation \& Testing.
+    \end{cvitems}
+  }
 
-\section{experience}
+\vspace*{-2mm}
+\cventry
+  {Director, Robot Software Program Management and Core Perception}
+  {}
+  {}
+  {2023--2024}
+  {
+    \begin{cvitems}
+      \item Lead product owner and technical leader respondible for leading, developing, and planing the portfolio of software and technologies which enable autonomous, intelligent, and efficient operation of Locus robots.
+      %\item Lead product owner and technical leader of the Robot Software Group
+      \item Create and maintaining release plans, development processes, technical roadmaps, and strategic initiatives to ensure the success of the Robot Software division.    
+    \end{cvitems} 
+  }
 
-\begin{entrylist}
+
 %------------------------------------------------
-\entry
-{2019--Present}
-{NSERC Canadian Robotics Network}
-{Canada}
-{\emph{Steering and Scientific Review Committee}
-\begin{itemize}
-    \item Coordination of research themes, allocation of resources and acceptance of network members for NCRN \end{itemize} }
-\entry
-{2012--Present}
-{Clearpath Robotics}
-{Kitchener, Canada}
-{\emph{Autonomy Engineering Mananger}
-\begin{itemize}
-    \item Managing strategic initiatives in robot perception for industrial indoor robots.
-    \item Develope perception technology road map for vehicle autonomy innovation. 
-    \item Manage research initiatives with internal, academic and industrial partners. 
-    \item Design and architect perception software across breadth of perception areas.
-    \item Lead a highly skilled group responsible for all robot perception work in the product
-    %\item Localization, SLAM, object tracking, object classification, obstacle avoidance, machine learning, semantic understanding and segmentation, among many others.
-\end{itemize} 
-\emph{Perception Team Leader} 
-\begin{itemize}
-    \item Lead a team of highly talented developers to create state-of-the art algorithms for robotics perception, computer vision, SLAM, and more.
-    %\item As the leader of the perception group I was responsible for all aspects of the perception technology stack for our OTTO industrial self-driving robots including LIDAR SLAM to visual object detection and classification.
-    \item Direct contributor to the autonomy perception software developing and architecting perception features to push the bounds on the reliability, efficiency, and intelligence of our industrial vehicle solutions.
-\end{itemize} 
-\emph{Senior Autonomy Engineer} 
-\begin{itemize}
-    \item Design, architect, and develop state-of-the-art autonomy software for industrial mobile robotics specializing in perception for mobile robotics including, SLAM, obstacle detection, target tracking, image processing, and long term robust autonomy.
-    \item Handled challanging use cases such as highly dynamic unstructured environments and near continuous up time within the industrial setting.
-\end{itemize} 
-\emph{Autonomy Engineer} 
-\begin{itemize}
-    \item Development of autonomy software and systems from the ground up for real world robotics applications.
-    \item Architected and developed the fundemental autonomy software that would become the basis for OTTO Motors division
-\end{itemize} }
+\cventry
+  {Director, Perception}
+  {Clearpath Robotics}
+  {Kitchener, Canada}
+  {2022--2023}
+  {
+    \begin{cvitems}
+      \item Developing and managing strategic initiatives to push the state-of-the-art in robot perception technologies for industrial indoor robots. 
+      \item Create and plan perception projects and technology roadmaps for industrial vehicle autonomy. 
+      \item Manage research initiatives with both internal stakeholders as well as external academic and industrial partners. 
+      \item Design and architect perception software across a wide breadth of perception applications.
+    \end{cvitems} 
+  }
+
+\vspace*{-2mm}
+\cventry
+  {Autonomy Engineering Mananger - Perception}
+  {}
+  {}
+  {2018--2022}
+  {
+    \begin{cvitems}
+      %\item Managing strategic initiatives in robot perception for industrial indoor robots.
+      %\item Develope perception technology road map for vehicle autonomy innovation. 
+      %\item Manage research initiatives with internal, academic and industrial partners. 
+      %\item Lead a highly skilled group responsible for all robot perception work in the product
+      %\item Localization, SLAM, object tracking, object classification, obstacle avoidance, machine learning, semantic understanding and segmentation, among many others.
+      \item Continued responsible for a growing team of high skilled team developing perception developers.     
+      \item Design and architect perception software across breadth of perception areas.
+      \item Scaling the team and technoloy to support rapid growth and adapt to continuously changing state of the art
+      \item Lead the introduction, development, and integration of machine learning technology into the robotics stack.
+     \end{cvitems} 
+  }
+
+\vspace*{-2mm}
+\cventry
+  {Perception Team Leader} 
+  {}
+  {}
+  {2016 -- 2018}
+  {
+    \begin{cvitems}
+      \item Develop and lead a team of highly talented developers to create state-of-the art algorithms for robotics perception, computer vision, and SLAM.
+      \item Develop perception software and features to push the bounds on the reliability, efficiency, and intelligence of our industrial vehicle solutions.
+    \end{cvitems} 
+  }
+
+\vspace*{-2mm}
+\cventry
+  {Senior Autonomy Engineer} 
+  {}
+  {}
+  {2015 -- 2016}
+  {
+    \begin{cvitems}
+      \item Design, architect, and develop state-of-the-art autonomy software for industrial mobile robotics specializing in perception for mobile robotics including, SLAM, obstacle detection, target tracking, image processing, and long term robust autonomy.
+      \item Handled challanging use cases such as highly dynamic unstructured environments and near continuous up time within the industrial setting.
+    \end{cvitems} 
+  }
+
+\vspace*{-2mm}
+\cventry
+  {Autonomy Engineer} 
+  {}
+  {}
+  {2014 -- 2015}
+  {
+  \begin{cvitems}
+    \item Development of autonomy software and systems for custom industrial robotics applications and systems.
+    \item Architected and developed the core autonomy software that would become the basis for OTTO Motors platforms
+  \end{cvitems} 
+  }
+
 %------------------------------------------------
-\entry
-{2012--2014}
-{Waterloo Autonomous Vehicles Laboratory - University of Waterloo}
-{Waterloo, Canada}
-{\emph{Graduate Student Researcher} 
-\begin{itemize}
-    \item Research focuses on improving SLAM methods by incorporating multi-channel information from non-homogeneous sensor configurations
-\end{itemize} }
+\cventry
+  {Graduate Student Researcher} 
+  {Waterloo Autonomous Vehicles Laboratory - University of Waterloo}
+  {Waterloo, Canada}
+  {2012--2014}
+  {
+    \begin{cvitems}
+      \item Research focuses on improving SLAM methods by incorporating multi-channel information from non-homogeneous sensor configurations
+    \end{cvitems}
+  }
+
 %------------------------------------------------
-\entry
-{2011-2012}
-{Research In Motion}
-{Waterloo, Canada}
-{\emph{Embedded Systems Software Developer} 
-\begin{itemize}
-    \item Developed sensor drivers for mobile phone products. 
-    \item Implemented sensor DSP algorithms to improve performance
-\end{itemize} }
-%------------------------------------------------
-\entry
-{2010}
-{Research in Motion}
-{Waterloo, Canada}
-{\emph{Advanced User Interfaces Developer}}
-%------------------------------------------------
-\entry
-{2010}
-{Sandvine Inc}
-{Waterloo, Canada}
-{\emph{Firmware Engineering Co-op}}
-%------------------------------------------------
-%\entry
-%{Spring 2009}
-%{Kaleidescape Inc}
-%{Waterloo, Canada}
-%{\emph{Hardware Engineering Co-op}}
-%%------------------------------------------------
-%\entry
-%{Fall 2008}
-%{Kaleidescape Inc}
-%{Waterloo, Canada}
-%{\emph{Software Engineering Co-op}}
-%------------------------------------------------
-\end{entrylist}
+\cventry
+  {Embedded Systems Software Developer} 
+  {Research In Motion}
+  {Waterloo, Canada}
+  {2011-2012}
+  {
+  \begin{cvitems}
+      \item Developed sensor drivers and DSP algorithms for mobile phone products. 
+  \end{cvitems}
+  }
+
+\end{cventries}
 
 %----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
+%	COMMITTEES
 %----------------------------------------------------------------------------------------
-%\vspace{-3mm}
-%\section{projects}
+\vspace{-4mm}
+\cvsection{Comittees}
+\begin{cventries}
+\cventry
+  {Research and Training Committee}
+  {Canadian Robotics Council}
+  {Canada}
+  {2022--Present}
+  {
+    \begin{cvitems}
+      \item Identify and share common challenges and opportunities for Canadian robotics researchers and educators
+      \item Facilitate coordinated efforts with industry and the government to stimulate collaborations between larger groups of Canadian roboticists while promoting international partnerships.
+    \end{cvitems}
+  }
 
-%\begin{entrylist}
-%    \entry
-%    {2012--2014}
-%    {NASA Sample Return Robot Challenge}
-%    {University of Waterloo Robotics Team}
-%    {\emph{Mapping and Localization Team Lead}
-%    \begin{itemize} 
-%        \item Developed state-of-the-art simultaneous localization and mapping (SLAM) techniques
-%        \item Designed novel integrated vision \& LIDAR mapping and localization methods
-%        \item Integrated and improved multiple proven methods to ensure robust SLAM solutions
-%    \end{itemize} 
-%    }
-%    \entry
-%    {2009--2010}
-%    {Intelligent Ground Vehicle Competition}
-%    {University of Waterloo Robotics Team}
-%    {\emph{Software Team Lead}
-%    \begin{itemize}
-%        \item Implemented advanced planning, estimation, and vision algorithms
-%        \item Designed and prototyped main electronics control board for the robot
-%    \end{itemize} 
-%    }
-%\end{entrylist}
-%\begin{entrylist}
-%    \entry
-%    {2008--2009}
-%    {Autonomous Landmine Removal (ALARM)}
-%    {University of Waterloo Robotics Team}
-%    {\emph{Junior Project Member}
-%    \begin{itemize}
-%        \item Fabricated and assembled the Kodiak robots for the multi robot system 
-%        \item Provided design input on robot construction for redesign improvements
-%        \item Prototyped and tested electronic control boards and electronics
-%    \end{itemize} 
-%    }
+\vspace{-1mm}
+\cventry
+  {Steering and Scientific Review Committee}
+  {NSERC Canadian Robotics Network}
+  {Canada}
+  {2019--2023}
+  {
+    \begin{cvitems}
+      \item Coordination of research themes, allocation of resources and acceptance of network members for NCRN 
+    \end{cvitems}
+  }
+\end{cventries}
 
-%    \entry
-%    {2008--2010}
-%    {Autonomous Mini-Sumo Robot}
-%    {University of Waterloo Robotics Team}
-%    {\emph{Technical Organizer}
-%    \begin{itemize}
-%        \item Designed autonomous mini-sumo robot competition, including skeleton designs
-%        \item Organized and mentored competitors of competition
-%    \end{itemize} 
-%    }
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\cvsection{Education}
 
-%    \entry
-%    {2009--2010}
-%    {Federation Orientation Committee}
-%    {University of Waterloo}
-%    {\emph{Federation Orientation Committee Member}
-%    \begin{itemize}
-%        \item Organized, and implemented the University of Waterloo Orientation Week 2011
-%        \item Led and organized over 300 volunteer leaders and over 6000 first year students
-%    \end{itemize} 
-%    }
-%\end{entrylist}
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Master of Applied Science in Mechatronics Engineering} % Degree
+    {University of Waterloo} % Institution
+    {Waterloo, Canada} % Location
+    {Sept. 2012 - August 2014} % Date(s)
+    {
+    %  \begin{cvitems} % Description(s) bullet points
+    %    \item {Focused on Simultanious Localization and Mapping for mobile robotics}
+    %  \end{cvitems
+    }
+
+\vspace{-4mm}
+  \cventry
+    {Batchelor of Applied Science in Mechatronics Engineering} % Degree
+    {University of Waterloo} % Institution
+    {Waterloo, Canada} % Location
+    {Sept. 2007 - April 2012} % Date(s)
+    {}
+
+%---------------------------------------------------------
+\end{cventries}
+
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\vspace{-3mm}
-\section{publications}
+%\vspace{-3mm}
+\cvsection{publications}
 
 \vspace{-3mm}
 \printbibsection{patent}{patents} % Print all articles from the bibliography
 
-\vspace{-2mm}
+\vspace{-6mm}
 \printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
-\vspace{-3mm}
+\vspace{-6mm}
 \printbibsection{inproceedings}{international peer-reviewed conferences/proceedings}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
 
-\vspace{-2mm}
-\section{education}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2012--2014}
-{Master {\normalfont of Applied Science}}
-{University of Waterloo}
-{Improving SLAM methods by incorporating multi-channel information}
-%------------------------------------------------
-\entry
-{2007--2012}
-{Bachelor {\normalfont of Applied Science}}
-{University of Waterloo}
-{Mechatronics Engineering}
-%------------------------------------------------
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
-\vspace{-3mm}
-%\section{commitees}
-
-%\begin{entrylist}
-%%------------------------------------------------
-%\entry
-%{2019--Present}
-%{Steering and Scientific Review Committee}
-%{NCFRN}
-%{The SSRC is responsibe for the coordination of themes, allocation or resources and acceptance of network members for the NSERC Canadian Robotics Network (NCRN) }
-%------------------------------------------------
-%\end{entrylist}
-
-%\begin{entrylist}
-%------------------------------------------------
-%\entry
-%{2013}
-%{NSERC Alexander Graham Bell Canada Graduate Scholarship}
-%{Natural Sciences and Engineering Research Council}
-%{Awarded to high caliber scholars with a high standard of achievement}
-%%------------------------------------------------
-%\entry
-%{2013}
-%{Mechanical \& Mechatronics Engineering Teaching Assistant Award}
-%{University of Waterloo}
-%{Awarded to Teaching Assistants judged to be outstanding}
-%--------------
-%\end{entrylist}
+%\input{resume/experience.tex}
+%\input{resume/honors.tex}
+%\input{resume/certificates.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+%\input{resume/education.tex}
+% \input{resume/extracurricular.tex}
 
 
-
-%----------------------------------------------------------------------------------------
-
-
+%-------------------------------------------------------------------------------
 \end{document}
