@@ -160,6 +160,7 @@
 }
 
 
+
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
@@ -955,13 +956,6 @@
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
+    \printbibliography[type={#1}, title={#2}, heading=subbibliography]
   \end{refsection}
 }
-
-\DeclareSortingScheme{chronological}{
-  \sort[direction=descending]{\field{year}}
-  \sort[direction=descending]{\field{month}}
-}
-
-
